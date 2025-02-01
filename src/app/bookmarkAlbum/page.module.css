@@ -1,0 +1,159 @@
+.main {
+   margin: 0;
+}
+@media (max-width:1000px) {
+   .main {
+      width: 1000px;
+   }
+}
+.main2 {
+   margin: 40px;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+.image1 {
+   border: 2px solid black;
+   border-radius: 100%;
+   width: 100px;
+   height: 100px;
+   margin-right: 30px;
+}
+
+.menu {
+   border: 1px solid rgb(195, 192, 192);
+   width: 150px;
+   margin-right: 20px;
+   height: 490px;
+   /* margin-top: 20px; */
+   /* border-radius: 4px; */
+}
+
+.menuTitle {
+   border-bottom: 1px solid rgb(195, 192, 192);
+   /* text-align: center; */
+   /* font-weight: bold; */
+   font-size: 21px;
+   color: #486c91;
+   padding: 5px;
+   padding-left: 10px;
+}
+.myBoard{
+   width: 85%;
+}
+.menuUl {
+   font-size: 13px;
+   padding-top: 10px;
+}
+
+.display {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   min-height: 400px;
+}
+.list{
+   border: 1px solid gray;
+   border-radius: 10px;
+   transition: all 0.2s;
+   padding: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+   background-color: rgb(243, 247, 255);
+   width: 190px;
+   height: 240px;
+   /* margin: 10px; */
+   gap: 10px;
+   margin-top: 10px;
+}
+.list:hover {
+   text-decoration: underline;
+}
+.image {
+   height: 140px;
+   object-fit: cover;
+   border-radius: 6px;
+}
+
+.categorie {
+   font-size: 10px;
+   font-weight: bold;
+   color: gray;
+}
+
+.user {
+   color: gray;
+   font-size: 12px;
+   padding-left: 7px;
+}
+
+.date {
+   color: gray;
+   font-size: 12px;
+   padding-left: 7px;
+}
+
+@media(max-width:1200px) {
+   .list{
+      border: 1px solid gray;
+      border-radius: 10px;
+      transition: all 0.2s;
+      padding: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: rgb(243, 247, 255);
+      width: 173px;
+      height: 210px;
+      /* margin: 10px; */
+      gap: 7px;
+      margin-top: 10px;
+   }
+   .image {
+      height: 120px;
+   }
+   .main {
+      gap: 10px;
+   }
+}
+.pagination1 {
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 50px;
+}
+.pagination2{
+   margin-right: 4px;
+   width: 27px;
+   border-radius: 100%;
+   transition: all 0.4s;
+}
+.pagination3{
+   margin-right: 4px;
+   transition: all 0.4s;
+   width: 27px;
+   border-radius: 100%;
+}
+.pagination4{
+   margin-right: 4px;
+   width: 27px;
+   transition: all 0.4s;
+   border-radius: 100%;
+}
+.pagination2:hover {
+   background-color: rgb(0, 0, 0);
+   color: white;
+}
+.pagination3:hover {
+   background-color: rgb(0, 0, 0);
+   color: white;
+}
+.pagination4:hover{
+   background-color: rgb(0, 0, 0);
+   color: white;
+}
+
+.name,.clock {
+   font-size: 10px;
+}
+.clock {
+   border-bottom: 1px dashed gray;
+   margin-bottom: 2px;
+}

@@ -1,0 +1,107 @@
+.container {
+   display: flex;
+   height: 70px;
+   border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+.image {
+   margin-top: 10px;
+   margin-left: 40px;
+}
+
+
+.right {
+   margin-left: auto;
+   margin-top: 15px;
+}
+
+.searchInput {
+   outline: none;
+   height: 17px;
+   margin-top: 10px;
+   padding-left: 6px;
+}
+
+.searchInput_form {
+   padding-bottom: 4px;
+   border-bottom: 4px solid;
+   display: flex;
+}
+
+.search_logo {
+   margin-top: 5px;
+}
+
+.login {
+   border: 1px solid black;
+   background-color: black;
+   color: white;
+   border-radius: 25px;
+   height: 35px;
+   padding-top: 7px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-right: 100px;
+   margin-top: 15px;
+   margin-left: 20px;
+   font-size: small;
+}
+
+.logout {
+   border: 1px solid black;
+   background-color: black;
+   color: white;
+   border-radius: 25px;
+   height: 35px;
+   padding-top: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-right: 10px;
+   margin-top: 15px;
+   margin-left: 20px;
+   font-size: small;
+}
+
+@media (prefers-color-scheme: dark) {
+   .image {
+      filter: invert();
+      /*색상반전*/
+   }
+
+   .login {
+      background-color: white;
+      color: black;
+   }
+
+   .logout {
+      background-color: white;
+      color: black;
+   }
+
+   .searchInput {
+      background-color: black;
+      color: white;
+   }
+
+   .search_logo {
+      filter: invert();
+   }
+
+   .searchInput_form {
+      border-bottom: 4px solid white;
+   }
+}
+
+.icon1 {
+   border-radius: 100%;
+   margin-right: 15px;
+   margin-top: 12px;
+   height: 45px;
+}
+
+.icon2 {
+   border-radius: 100%;
+   margin-right: 15px;
+   margin-top: 12px;
+   height: 45px;
+}

@@ -1,0 +1,45 @@
+.main {
+   margin: 0;
+}
+
+@media(max-width:1200px) {
+   .main {
+      width: 1200px;
+   }
+}
+
+.menu {
+   padding: 2px;
+   margin: 10px;
+   transition: all 0.2s;
+   width: 200px;
+}
+
+.menu:hover{
+   background-color: rgb(148, 167, 187);
+   border-radius: 5px;
+}
+
+.allBoard {
+   margin-left: 10%;
+   margin-right: 10%;
+   margin-top: 40px;
+}
+
+.append {
+   margin-left: auto;
+   border: 1px solid;
+   padding: 7px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 25px;
+   display: flex;
+   transition: all 0.3s;
+}
+.append:hover {
+   background-color: #000000;
+   color: white;
+}
+.append:hover .icon {
+   filter: invert(1); /* 색상 반전 */
+}

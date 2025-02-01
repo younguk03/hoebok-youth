@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SessionProvider } from "next-auth/react";
+import PageTransition from "@/components/PageTransition";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>회복의 교회 청년부</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <PageTransition>
+          <SessionProvider>
+            {children}
+            <Analytics/>
+          </SessionProvider>
+        </PageTransition>
       </body>
     </html>
   );
