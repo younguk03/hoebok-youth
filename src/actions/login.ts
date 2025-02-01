@@ -1,23 +1,26 @@
-import { convertUserToObj } from "@/libs/helpers";
+'use server'
 import connectMongoDB from "@/libs/mongodb"
 import User from "@/models/user"
 import bcrypt from 'bcryptjs';
 
-export async function login(name: string, password: string) {
+export async function handleSignIn(name: string, password: string) {
    try {
-      await connectMongoDB()
-      const id = await User.findOne({ name })
-      if (!id) {
-         alert('이름 또는 비밀번호가 틀렸습니다.')
-      }
-      // 입력한 비밀번호와 저장된 비밀번호 비교
-      const isPasswordCorrect = await bcrypt.compare(password, id.password);
+      await connectMongoDB();
+      const user = await User.findOne({ name });
 
-      if (!isPasswordCorrect) {
-         alert('이름또는 비밀번호가 틀렸습니다.')
+      if (!user) {
+         return { error: "사용자를 찾을 수 없습니다." };
       }
-      return { success: true, user: convertUserToObj(id) }
+
+      const isValid = await bcrypt.compare(password, user.password);
+      if (!isValid) {
+         return { error: "비밀번호가 일치하지 않습니다." };
+      }
+
+      // ✅ 여기서 signIn()을 호출하지 않음 (클라이언트에서 실행해야 함)
+      return { success: true };
    } catch (error) {
-      throw new Error(`문서 수정에 실패했습니다. ${error}`)
+      console.error("Sign in error:", error);
+      return { error: "An unexpected error occurred" };
    }
 }

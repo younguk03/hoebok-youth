@@ -9,7 +9,6 @@ export async function register( name: string, email: string, password: string) {
    try {
       await connectMongoDB();
       console.log("Register 함수 호출됨", { name, email, password });
-      // const user = await User.create({email,name, password});
       
 
       const userFound = await User.findOne({email})

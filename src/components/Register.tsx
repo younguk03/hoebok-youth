@@ -10,22 +10,20 @@ export default function Register() {
    const [email, setEmail] = useState('')
    const [name, setName] = useState('')
    const [password, setPassword] = useState('')
+   const [confirmPassword, setConfirmPassword] = useState('')
 
    //양식이 호출되는 비동기함수
    //FormData를 사용하여 양식 추출, 등록 서버 작음을 호출하여 사용자 등록, 오류처리, 등록성공식 로그인 페이지로 리다이렉션등의 양식 제출을 처리
    const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault()
       try {
-         const p1 = document.querySelector('password1')
-         const p2 = document.querySelector('password2')
-         const n = document.querySelector('name')
-         const em = document.querySelector('email')
-         if (p1 === null || p2 === null || n === null || em === null) {
-            alert('전부 적어주세요')
+         if (!name || !email || !password || !confirmPassword) {
+            alert('모든 필드를 입력해주세요')
          }
-         else if (p1 === p2) {
+         else if (password === confirmPassword) {
             const result = await register(name, email, password)
             if (result?.success) {
+               alert('회원가입 성공!')
                router.push('/login')
             } else if (result?.error) {
                console.log(result.error)
@@ -59,9 +57,9 @@ export default function Register() {
             </div>
             <div>
                <label>비밀번호 확인</label>
-               <input type="password" id='password2' placeholder='비밀번호 확인' className={styles.p2} />
+               <input type="password" id='password2' placeholder='비밀번호 확인' className={styles.p2} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
             </div>
-            <button className={styles.button} type='submit' >가입하기</button>
+            <button className={styles.button} type='submit'>가입하기</button>
          </form>
       </div>
    )
