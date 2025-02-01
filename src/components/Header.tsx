@@ -64,7 +64,7 @@ export default function Header() {
                )}
             </div>
          ) : (
-            <Link href={'./login'} className={styles.login}>
+            <Link href={'/login'} className={styles.login}>
                로그인
             </Link>
          )}

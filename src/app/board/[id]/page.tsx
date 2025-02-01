@@ -8,6 +8,7 @@ import AutoLink from './AutoLink';
 import RemoveBtn from '@/components/RemoveBoardBtn';
 import Bookmark from '@/components/Bookmark';
 import { BiEditAlt } from 'react-icons/bi';
+import SignIn from '@/components/sign-in';
 //Next.js 15부터 params가 비동기적으로 처리되어 Promise를 반환하도록 변경되었다.
 
 
@@ -15,6 +16,12 @@ export default async function page({ params }: { params: Promise<{ id: string }>
    const { id } = await params;
    const { board } = await getBoard(id);
    const session = await auth();
+
+   if (id === 'login') {
+      return (
+         <SignIn/>
+      )
+   }
 
    return (
       <div className={style.main}>
