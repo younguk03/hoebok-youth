@@ -13,6 +13,7 @@ export default async function page({ params }: { params: Promise<{ id: string }>
    const { id } = await params;
    const { board } = await getBoard(id);
    const session = await auth();
+   document.title = `회복의 교회 청년부 앨범| ${board.title}`
 
    return (
       <div className={style.main}>
