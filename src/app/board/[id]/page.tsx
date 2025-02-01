@@ -39,7 +39,7 @@ export default async function page({ params }: { params: Promise<{ id: string }>
                {session?.user?.name === board.user && (
                   <>
                      <div className={style.edit_icon}>
-                        <Link href={`/editAlbum/${board._id}`}>
+                        <Link href={`/editBoard/${board._id}`}>
                            <BiEditAlt size={26}/>
                         </Link>
                      </div>
