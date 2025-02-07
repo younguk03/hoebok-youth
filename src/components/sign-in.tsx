@@ -37,7 +37,7 @@ export default function SignIn() {
                   <span className='pt-2'>네이버 계정으로 로그인</span>
                </button>
             </form>
-            <form
+            {/* <form
                action={kakaoSignIn}
                className={styles.kakao}
             >
@@ -47,7 +47,7 @@ export default function SignIn() {
                      카카오 계정으로 로그인
                   </span>
                </button>
-            </form>
+            </form> */}
             <div>
                <span className='text-xs mr-1'>계정이 없으신가요?</span>
                <Link href={'/register'}><span className='text-xs text-blue-500 hover:underline'>여기를 클릭하세요!</span></Link>
