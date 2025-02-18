@@ -6,7 +6,6 @@ import naver from "next-auth/providers/naver"
 import connectMongoDB from "./libs/mongodb"
 import User from "./models/user"
 import brcypt from "bcryptjs"
-import twitter from "next-auth/providers/twitter"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
    providers: [google, naver ,kakao, credentials({

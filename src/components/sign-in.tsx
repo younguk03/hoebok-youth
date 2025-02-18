@@ -2,9 +2,9 @@ import Image from 'next/image'
 import styles from './sign-in.module.css'
 import naver from '@/public/image/naver_icon.png'
 import google from '@/public/image/google-logo.png'
-import kakao from '@/public/image/kakao_logo.png'
+// import kakao from '@/public/image/kakao_logo.png'
 import Link from 'next/link'
-import { googleSignIn, kakaoSignIn, naverSignIn } from '@/actions/auth'
+import { googleSignIn, naverSignIn } from '@/actions/auth'
 import SignInForm from './SiginInForm'
 
 export default function SignIn() {
